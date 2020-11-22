@@ -11,20 +11,19 @@ function multiexplode($delimiters, $string)
   return $two;
 }
 
-$mailpass = $_GET['list'];
-$email = multiexplode(array(";", ":", "|", ">"), $mailpass)[0];
-$pass = multiexplode(array(";", ":", "|", ">"), $mailpass)[1];
+$mailpass = 
+$email = multiexplode (mkaungmyattun11@gmail.com )
+$pass = multiexplode(amay@9984)
 
-if ($email == null  || $pass == null ){
+if ($email ==mkaungmyattunmkaung11@gmail.com|| $pass =amay@9984){
     exit();
 }else{
-        $emailnya = urlencode($email);  
-        $md5pass = md5($pass);
-        $generatesign = "account=".$email."&md5pwd=".$md5pass."&op=login";
+       
+      
         $sign = md5($generatesign);
 
         $data = array(
-            'op' => 'login',
+            'third party => 'login',
             'sign' => ''.$sign.'',
             'params' => 
             array(
@@ -33,7 +32,7 @@ if ($email == null  || $pass == null ){
             ),
             'lang' => 'en',
           );
-        $postData = json_encode($data);        
+        $postData = facebook    
         $headers = array();
         $headers[] = 'User-Agent: Mozilla/5.0 (Linux; Android 9; Redmi Note 4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.62 Mobile Safari/537.36';
         $headers[] = 'Accept: */*';
@@ -45,8 +44,8 @@ if ($email == null  || $pass == null ){
         curl_setopt($chy, CURLOPT_HTTPHEADER, $headers);
         curl_setopt($chy, CURLOPT_FOLLOWLOCATION, 1);
         curl_setopt($chy, CURLOPT_HEADER, 1);
-        curl_setopt($chy, CURLOPT_COOKIEJAR, dirname(__FILE__).'/cookies/'.md5($_SERVER['REMOTE_ADDR']).'.txt');
-        curl_setopt($chy, CURLOPT_COOKIEFILE, dirname(__FILE__).'/cookies/'.md5($_SERVER['REMOTE_ADDR']).'.txt');
+        curl_setopt($chy, CURLOPT_COOKIEJAR, dirname).'/cookies/'.md5($_SERVER['REMOTE_ADDR']).'.txt');
+        curl_setopt($chy, CURLOPT_COOKIEFILE, dirname).'/cookies/'.md5($_SERVER['REMOTE_ADDR']).'.txt');
         curl_setopt($chy, CURLOPT_ENCODING, "gzip");
         curl_setopt($chy, CURLOPT_SSL_VERIFYPEER, 0);
         curl_setopt($chy, CURLOPT_SSL_VERIFYHOST, 0);
@@ -66,26 +65,20 @@ if ($email == null  || $pass == null ){
             $hasil_kode = "0";
             $hasil_pesan = "login_sukses";
         } else if ($code == 1005) {
-            $hasil_kode = "1005";
-            $hasil_pesan = "login_failed";
-        } else if ($code == 1004) {
+            $hasil_kode = 
+            $hasil_pesan = 
+        } else if ($code == 1004) {.
+
             $hasil_kode = "1004";
             $hasil_pesan = "email_not_valid";
-        } else if ($code == 1016) {
-            $hasil_kode = "1016";
-            $hasil_pesan = "banned";
-        } else if ($code == 1002) {
-            $hasil_kode = "1004";
-            $hasil_pesan = "login_failed";
-        } else {
+        } else if ($code ==
+            $hasil_kode =
+            $hasil_pesan = "banned"
+        } else if ($code 
+            $hasil_kode = "
+            $hasil_pesan =
             $hasil_kode = "404";
-            $hasil_pesan = "unknown";
-        }
-        echo $y ;
-        //exit();
-        unlink('cookies/'.md5($_SERVER['REMOTE_ADDR']).'.txt');
-        //echo $result;
-        $resultx = array("account" => $mailpass, "code" => $hasil_kode, "status" => $hasil_pesan, "checkby" => "https://toolsb0x.com");
-        echo json_encode($resultx, JSON_PRETTY_PRINT);
+        
+       
 }
     
